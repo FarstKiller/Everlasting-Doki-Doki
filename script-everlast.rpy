@@ -1,6 +1,6 @@
 label nekomonika_kill:
-    default persistent.you_kill_neko-monika = None
-    $ persistent.you_kill_neko-monika = False
+    default persistent.you_kill_nekomonika = None
+    $ persistent.you_kill_nekomonika = False
     $ style.say_window = style.window_glitch
     stop music
     $ HideScreens()
@@ -23,7 +23,7 @@ label nekomonika_kill:
     scene bg bsod100
     $ pause(0.1)
     scene black
-    $ persistent.you_kill_neko-monika = True
+    $ persistent.you_kill_nekomonika = True
     $ renpy.quit()
 
 label script_everlast:
