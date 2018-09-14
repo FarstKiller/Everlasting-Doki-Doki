@@ -4,11 +4,13 @@ label neko-monika_kill:
     $ style.say_window = style.window_glitch
     stop music
     window hide
+    $ mouse_visible = False
     scene bsod
     $ quick_menu = False
     $ config.allow_skipping = False
     $ pause(0.5)
     window auto
+    $ mouse_visible = True
     m "Срань господня..."
     m "Что случилось?"
     $ nm_name = "Neko-Monika"
