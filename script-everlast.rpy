@@ -3,12 +3,12 @@ label neko-monika_kill:
     $ persistent.you_kill_neko-monika = False
     $ style.say_window = style.window_glitch
     stop music
-    window hide
+    $ HideScreens()
     scene bsod
     $ quick_menu = False
     $ config.allow_skipping = False
     $ pause(0.5)
-    window auto
+    $ ShowScreens(False)
     m "Срань господня..."
     m "Что случилось?"
     $ nm_name = "Neko-Monika"
@@ -17,7 +17,7 @@ label neko-monika_kill:
     m "Я тебя не поняла..."
     nm "Сама всё увидишь, мразь..."
     m "Что увижу—?{nw}"
-    window hide
+    $ HideScreens()
     scene bg bsod100
     $ pause(0.1)
     scene black
