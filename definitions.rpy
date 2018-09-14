@@ -1,6 +1,7 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
 define config.developer = False
+default persistent.you_kill_nekomonika = None
 
 #define nightmode = ""
 #define outlines_nightmode = "ffcabd"
