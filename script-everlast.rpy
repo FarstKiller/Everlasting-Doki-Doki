@@ -24,6 +24,7 @@ label nekomonika_kill:
     scene black
     $ persistent.you_kill_nekomonika = True
     $ renpy.quit()
+return
 
 label script_everlast:
     $ persistent.menu_bg_animation = True
@@ -399,4 +400,4 @@ label script_everlast:
     m "{i}Минуточку...{/i}"
     m "{i}Она-то откуда?{/i}"
     m "{i}Серьёзно, я её не знаю.{/i}"
-    
+return  # стоит условно, поскольку сценарий пишется дальше
