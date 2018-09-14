@@ -1,5 +1,4 @@
 label nekomonika_kill:
-    default persistent.you_kill_nekomonika = None
     $ persistent.you_kill_nekomonika = False
     $ style.say_window = style.window_glitch
     stop music
