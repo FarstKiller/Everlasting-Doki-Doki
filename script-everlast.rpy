@@ -1,4 +1,4 @@
-label neko-monika_kill:
+label nekomonika_kill:
     default persistent.you_kill_neko-monika = None
     $ persistent.you_kill_neko-monika = False
     $ style.say_window = style.window_glitch
@@ -385,7 +385,7 @@ label script_everlast:
     m "Хорошо, тогда я перемещу камеру в лагерь—{nw}"
     python:
         try: renpy.file("../characters/neko-monika.chr")
-        except: renpy.jump('neko-monika_kill')
+        except: renpy.jump('nekomonika_kill')
     $ ei_name = "У-у-у, сука..."
     show eileen concerned at t11
     ei "..."
