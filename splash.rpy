@@ -25,12 +25,12 @@ init -100 python:
         pass
     if not renpy.version_only == "7.1.0.882":
         renpy.error("Так-так-так... что это тут у нас? Пытаемся не использовать порт на новую версию движка? Совсем умом тронулся??? :D")
-    if persistent.you_kill_neko-monika = True:
+    if persistent.you_kill_nekomonika = True:
         renpy.error("Ты... ты очень-очень нехороший человек... ВЕРНИ ЕЁ!!!")
-        persistent.you_kill_neko-monika = False
-    if persistent.you_kill_neko-monika = False:
+        persistent.you_kill_nekomonika = False
+    if persistent.you_kill_nekomonika = False:
         try: renpy.file("../characters/neko-monika.chr")
-        except: persistent.you_kill_neko-monika = True
+        except: persistent.you_kill_nekomonika = True
 
 init python:
     menu_trans_time = 1
