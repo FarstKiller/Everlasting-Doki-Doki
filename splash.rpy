@@ -427,7 +427,6 @@ label autoload:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ renpy.music.play(config.main_menu_music)
     return
 
 label quit:
