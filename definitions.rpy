@@ -637,6 +637,7 @@ define audio.t11 = "<loop 4.499>mod_assets/11.ogg"
 define audio.t12 = "<loop 19.451>bgm/ext_road_day.ogg"
 define audio.t13 = "<loop 19.451>bgm/a_promise_from_distant_days.ogg"
 define audio.t14 = "<loop 19.451>mod_assets/14.ogg"
+define audio.t15 = "mod_assets/get_to_know_me_better.ogg"
 define audio.td = "<loop 36.782>bgm/d.ogg"
 define audio.attack_screen = "mod_assets/attack_screen.ogg"
 
