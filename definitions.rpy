@@ -606,7 +606,7 @@ image dust12:
 
 
 
-define audio.t1 = "<loop 22.073>bgm/blow_with_the_fires.ogg"
+define audio.t1 = "bgm/blow_with_the_fires.ogg"
 define audio.t2 = "<loop 4.499>bgm/2.ogg"
 define audio.t2g = "bgm/2g.ogg"
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"
