@@ -58,9 +58,44 @@ transform rs22:
 transform rs11:
     rightin_slowly(640)
 
+transform ls41:
+    leftin_slowly(200)
+transform ls42:
+    leftin_slowly(493)
+transform ls43:
+    leftin_slowly(786)
+transform ls44:
+    leftin_slowly(1080)
+transform ls31:
+    leftin_slowly(240)
+transform ls32:
+    leftin_slowly(640)
+transform ls33:
+    leftin_slowly(1040)
+transform ls21:
+    leftin_slowly(400)
+transform ls22:
+    leftin_slowly(880)
+transform ls11:
+    leftin_slowly(640)
+
 transform rightin_slowly(x=640, z=0.80):
     xcenter 1400 yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
     easein 2.00 xcenter x
+    
+transform leftin_slowly(x=640, z=0.80):
+    xcenter -300 yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
+    easein 1.00 xcenter x
+
+transform hide_right_slowly:
+    subpixel True
+    on hide:
+        easeout 2.00 xcenter 1600
+
+transform hide_left_slowly:
+    subpixel True
+    on hide:
+        easeout 2.00 xcenter -300
 
 transform bg_zoom_rotate_l(z=1.0, zz=1.0, t=0.25, x=0.5, xx=0.5, y=0.5, yy=0.5, r=0.0, rr=0.0):
     zoom z xalign x yalign y rotate r
