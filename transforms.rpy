@@ -27,6 +27,10 @@ transform screen_attack:
 transform bg_alpha(a=1.0):
     alpha a
 
+transform bg_zoom_rotate_l(z=1.0, zz=1.0, t=0.25, x=0.5, xx=0.5, y=0.5, yy=0.5, r=0.0, rr=0.0):
+    zoom z xalign x yalign y rotate r
+    linear t zoom zz xalign xx yalign yy rotate rr
+
 transform right_menu_anim_fast(xal):
     xoffset -100
     alpha 0.0
