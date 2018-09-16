@@ -448,7 +448,7 @@ init -1 python:
         if not player: return
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("start")
+        renpy.show_screen("user_input")
 
 init -501 screen navigation():
 
@@ -467,7 +467,7 @@ init -501 screen navigation():
 
             if main_menu:
 
-                    textbutton _("Новая игра") at right_menu_anim_fast(0.0) action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Как зовут Протагониста?", ok_action=Function(FinishEnterName)))
+                    textbutton _("Новая игра") at right_menu_anim_fast(0.0) action Jump("edd_input_name")
 
             else:
 
@@ -1495,7 +1495,7 @@ init -1 style history_label_text:
 
 
 
-init -501 screen name_input(message, ok_action):
+init -501 screen name_input(message, ok_action, output_var, use_overlay=True):
 
 
     modal True
@@ -1504,7 +1504,9 @@ init -501 screen name_input(message, ok_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    if use_overlay:
+        add "gui/overlay/confirm.png"
+        
     key "K_RETURN" action [Play("sound", gui.activate_sound), ok_action]
 
     frame at up_poem_anim(0.0):
@@ -1518,7 +1520,7 @@ init -501 screen name_input(message, ok_action):
             style "confirm_prompt"
             xalign 0.5
 
-        input default "" value VariableInputValue("player") length 12 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя"
+        input default "" value VariableInputValue(output_var) length 12 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя"
 
 
 
