@@ -27,6 +27,41 @@ transform screen_attack:
 transform bg_alpha(a=1.0):
     alpha a
 
+transform rs51:
+    rightin_slowly(216)
+transform rs52:
+    rightin_slowly(432)
+transform rs53:
+    rightin_slowly(658)
+transform rs54:
+    rightin_slowly(894)
+transform rs55:
+    rightin_slowly(1110)
+transform rs41:
+    rightin_slowly(200)
+transform rs42:
+    rightin_slowly(493)
+transform rs43:
+    rightin_slowly(786)
+transform rs44:
+    rightin_slowly(1080)
+transform rs31:
+    rightin_slowly(240)
+transform rs32:
+    rightin_slowly(640)
+transform rs33:
+    rightin_slowly(1040)
+transform rs21:
+    rightin_slowly(400)
+transform rs22:
+    rightin_slowly(880)
+transform rs11:
+    rightin_slowly(640)
+
+transform rightin_slowly(x=640, z=0.80):
+    xcenter 1400 yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
+    easein 2.00 xcenter x
+
 transform bg_zoom_rotate_l(z=1.0, zz=1.0, t=0.25, x=0.5, xx=0.5, y=0.5, yy=0.5, r=0.0, rr=0.0):
     zoom z xalign x yalign y rotate r
     linear t zoom zz xalign xx yalign yy rotate rr
