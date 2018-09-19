@@ -418,6 +418,6 @@ label script_everlast:
     m "{i}Серьёзно?!..{/i}"
     m "{i}Так, теперь я точно перемещаю камеру в лагерь.{/i}"
     scene black with wipeleft_scene
-    scene ext_square_day with wipeleft_scene
+    scene bg ext_houses_day with wipeleft_scene
     m "..."
     return  # стоит условно, поскольку сценарий пишется дальше
