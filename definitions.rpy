@@ -4,9 +4,9 @@ define config.developer = False
 default persistent.you_kill_nekomonika = None
 
 #define nightmode = ""
-#define outlines_nightmode = "ffcabd"
-#define hover_outlines_nightmode = "ffd7cd"
-#define insensitive_outlines_nightmode = "ebd0c9"
+#define outlines_nightmode = "#ffcabd"
+#define hover_outlines_nightmode = "#ffd7cd"
+#define insensitive_outlines_nightmode = "#ebd0c9"
 
 python early:
     import singleton
@@ -664,7 +664,7 @@ define audio.camp_center_day = "bgm/camp_center_day.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
-define audio.everlast = "<loop 22.073>bgm/blow_with_the_fires.ogg"
+define audio.everlast = "bgm/blow_with_the_fires.ogg"
 define audio.night = "bgm/nightsound.mp3"
 define audio.eurobeatreality = "bgm/eurobeatreality.ogg"
 
@@ -3010,7 +3010,7 @@ define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define mm = DynamicCharacter('m_name', image='monika', what_prefix='~', what_suffix='~', ctc="ctc", ctc_position="fixed")
+define mm = DynamicCharacter('m_name', what_prefix='~', what_suffix='~', ctc="ctc", ctc_position="fixed")
 define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define ny = Character('Нацуки и Юри', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
