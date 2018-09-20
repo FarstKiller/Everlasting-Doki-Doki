@@ -1902,6 +1902,10 @@ image natsuki 1be = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 1bea = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 1bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -1986,6 +1990,14 @@ image natsuki 1bz = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/z.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 1bza = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/za.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 1bzb = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
 image natsuki 2ba = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/a.png"),
@@ -2007,6 +2019,10 @@ image natsuki 2be = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 2bea = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 2bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2091,6 +2107,14 @@ image natsuki 2bz = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/z.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 2bza = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/za.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 2bzb = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/zb.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
 image natsuki 3ba = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/a.png"),
@@ -2112,6 +2136,10 @@ image natsuki 3be = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 3bea = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 3bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2196,7 +2224,15 @@ image natsuki 3bz = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/z.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-
+image natsuki 3bza = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/za.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 3bzb = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+    
 image natsuki 4ba = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/a.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/a.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2217,6 +2253,10 @@ image natsuki 4be = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 4bea = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 4bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2301,6 +2341,14 @@ image natsuki 4bz = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/z.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/z.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 4bza = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/za.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/za.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 4bzb = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/zb.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
 image natsuki 12ba = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/2bta.png"),
@@ -2396,6 +2444,10 @@ image natsuki 5be = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (18, 22), "natsuki/e.png", (0, 0), "natsuki/3b.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/e.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/e.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 5bea = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (18, 22), "natsuki/ea.png", (0, 0), "natsuki/3b.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/ea.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/ea.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 5bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (18, 22), "natsuki/f.png", (0, 0), "natsuki/3b.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/f.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2480,8 +2532,48 @@ image natsuki 5bz = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (18, 22), "natsuki/z.png", (0, 0), "natsuki/3b.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/z.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/z.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 5bza = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (18, 22), "natsuki/za.png", (0, 0), "natsuki/3b.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/za.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/za.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 5bzb = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (18, 22), "natsuki/zb.png", (0, 0), "natsuki/3b.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/zb.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (18, 22), "natsuki/zb.png", (0, 0), "natsuki/3b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
-
+image natsuki 6ba = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6ba.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6ba.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6ba.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6bb = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bb.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bb.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bb.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6bc = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bc.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bc.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bc.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6bd = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bd.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bd.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bd.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6be = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6be.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6be.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6be.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6bf = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bf.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bf.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bf.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6bg = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bg.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bg.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bg.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 6bh = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bh.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bh.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bh.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+    
 image natsuki 1 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")
 image natsuki 2 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/1t.png")
 image natsuki 3 = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")
@@ -3184,6 +3276,64 @@ image monika 4r = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "mon
 
 image monika 5a = im.Composite((960, 960), (0, 0), "monika/3a.png")
 image monika 5b = im.Composite((960, 960), (0, 0), "monika/3b.png")
+
+image mc 1a = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/a.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/a.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/a.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 1b = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/b.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 1c = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/c.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/c.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/c.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 1d = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/d.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/d.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/d.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 1e = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/e.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 1f = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/f.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/f.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 1g = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/g.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/g.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/1.png", (0, 0), "images/mc/g.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+
+image mc 2a = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/a.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/a.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/a.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 2b = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/b.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/b.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/b.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 2c = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/c.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/c.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/c.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 2d = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/d.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/d.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/d.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 2e = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/e.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 2f = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/f.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/f.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image mc 2g = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/g.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/g.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/mc/2.png", (0, 0), "images/mc/g.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
 image monika g1:
     "monika/g1.png"
