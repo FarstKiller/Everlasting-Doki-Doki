@@ -4,7 +4,16 @@ label nekomonika_kill:
     stop music
     $ HideScreens()
     $ mouse_visible = False
-    scene bsod
+    if renpy.windows and renpy.game.preferences.fullscreen:
+        scene bsod
+    elif renpy.macintosh and renpy.game.preferences.fullscreen:
+        scene mac_kernelpanic
+    elif renpy.ios:
+        scene blue
+    elif renpy.android:    
+        scene android_nocommand
+    else:
+        scene black
     $ quick_menu = False
     $ config.allow_skipping = False
     $ pause(0.5)
@@ -19,7 +28,16 @@ label nekomonika_kill:
     nm "Сама всё увидишь, мразь..."
     m "Что увижу—?{nw}"
     $ HideScreens()
-    scene bg bsod100
+    if renpy.windows and renpy.game.preferences.fullscreen:
+        scene bg bsod100
+    elif renpy.macintosh and renpy.game.preferences.fullscreen:
+        scene mac_kernelpanic
+    elif renpy.ios:
+        scene blue
+    elif renpy.android:    
+        scene android_nocommand
+    else:
+        scene black
     $ pause(0.1)
     scene black
     $ persistent.you_kill_nekomonika = True
@@ -433,7 +451,8 @@ label script_everlast:
         show light_bg_anim zorder 10
     $ ShowScreens(False)
     play music audio.camp_center_day fadein 2
-    "Я переместилась на локацию в которой, слева и справа стояли небольшие домики – по-видимому, жилища местных пионеров."
+    "Я переместилась в локацию, где слева и справа стояли небольшие домики."
+    "Судя по всему, это жилища местных пионеров."
     "В принципе, снаружи они выглядели довольно уютно."
     play sound walk
     show layer master at bg_zoom_e(1.0, 1.2, 2.0, 0.5, 0.5, 0.5, 0.5)
@@ -441,8 +460,8 @@ label script_everlast:
     show sayori 1ba zorder 2 at rs42
     show mc 2f zorder 2 at rs43
     play music audio.t16 fadein 2
-    "По дороге я встретила Сайори и [edd_name_whom]."
-    mm "Может, хоть тут будет счастье в отличие от литературного клуба?"
+    "Расхаживая вокруг, я заметила Сайори и [edd_name_whom]."
+    mm "Быть может, здесь будет счастье, нежели в литературном клубе?"
     show sayori 2bx zorder 3
     show mc 1c zorder 2
     s "..."
