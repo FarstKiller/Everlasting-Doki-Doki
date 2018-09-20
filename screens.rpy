@@ -246,7 +246,7 @@ init 499 image ctc:
 
 
 init 499 image input_caret:
-    Solid("#fff")
+    Solid("#000")
     size (2,25) subpixel True
     block:
         linear 0.35 alpha 0
@@ -644,13 +644,13 @@ init -1 style main_menu_title:
     size gui.title_text_size
 
 #style main_menu_night_frame is main_menu_frame_night
-style main_menu_vbox is vbox
-style main_menu_text is gui_text
-style main_menu_title is main_menu_text
-style main_menu_version is main_menu_text:
-    color "#ffffff"
-    size 16
-    outlines []
+#style main_menu_vbox is vbox
+#style main_menu_text is gui_text
+#style main_menu_title is main_menu_text
+#style main_menu_version is main_menu_text:
+#    color "#ffffff"
+#    size 16
+#    outlines []
 
 
 
@@ -1561,12 +1561,6 @@ init -501 screen dialog(message, ok_action):
 
             textbutton _("OK") action ok_action
 
-init 499 image confirm_glitch:
-    "gui/overlay/confirm_glitch.png"
-    pause 0.02
-    "gui/overlay/confirm_glitch2.png"
-    pause 0.02
-    repeat
 
 init -501 screen confirm(message, yes_action, no_action):
 
@@ -1618,7 +1612,7 @@ init -1 style confirm_frame:
     yalign .5
 
 init -1 style confirm_prompt_text:
-    color "#fff"
+    color "#000"
     outlines []
     text_align 0.5
     layout "subtitle"
