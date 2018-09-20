@@ -351,7 +351,7 @@ label script_everlast:
     play sound attack_screen
     show layer screens at screen_attack
     s 1bp "ВЫТАЩИ МЕНЯ ОТСЮДА!!!"
-    mm "Чего?!{/i}"
+    mm "Чего?!"
     mm "Конечно, от Сайори можно ожидать чего угодно..."
     $ s_name = "Сайори"
     mm "Но вот такого я от неё никак не ожидала..."
