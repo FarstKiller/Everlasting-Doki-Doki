@@ -69,6 +69,7 @@ label endgame(pause_length=4.0):
     pause pause_length
     $ quick_menu = True
     return
+    
 label edd_name_cases:
     $ consonants = [u'б', u'в', u'г', u'д', u'ж', u'з', u'й', u'к', u'л', u'м', u'н', u'п', u'р', u'с', u'т', u'ф', u'х', u'ц', u'ч', u'ш', u'щ', u'ь']
     $ combinations = [u'жа', u'ша', u'ща', u'ца']
