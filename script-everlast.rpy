@@ -7,11 +7,11 @@ label nekomonika_kill:
     if renpy.windows and renpy.game.preferences.fullscreen:
         scene bsod
     elif renpy.macintosh and renpy.game.preferences.fullscreen:
-        scene mac_kernelpanic
+        scene bg mac_kernelpanic
     elif renpy.ios:
         scene blue
     elif renpy.android:    
-        scene android_nocommand
+        scene bg android_nocommand
     else:
         scene black
     $ quick_menu = False
@@ -31,11 +31,11 @@ label nekomonika_kill:
     if renpy.windows and renpy.game.preferences.fullscreen:
         scene bg bsod100
     elif renpy.macintosh and renpy.game.preferences.fullscreen:
-        scene mac_kernelpanic
+        scene bg mac_kernelpanic
     elif renpy.ios:
         scene blue
     elif renpy.android:    
-        scene android_nocommand
+        scene bg android_nocommand
     else:
         scene black
     $ pause(0.1)
