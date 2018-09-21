@@ -1005,50 +1005,176 @@ image lucy happy = im.Composite((960, 960), (0, 0), "images/ly/lucy happy.png")
 image lucy mad = im.Composite((960, 960), (0, 0), "images/ly/lucy mad.png")
 
 #Модельки Виолы (взято из «Бесконечное лето»)
-image viola cs_1_normal = im.Composite((960, 960), (0, 0), "images/cs/cs_1_normal.png")
-image viola cs_1_shy = im.Composite((960, 960), (0, 0), "images/cs/cs_1_shy.png")
-image viola cs_1_smile = im.Composite((960, 960), (0, 0), "images/cs/cs_1_smile.png")
-image viola cs_1g_normal = im.Composite((960, 960), (0, 0), "images/cs/cs_1g_normal.png")
-image viola cs_1g_shy = im.Composite((960, 960), (0, 0), "images/cs/cs_1g_shy.png")
-image viola cs_1g_smile = im.Composite((960, 960), (0, 0), "images/cs/cs_1g_smile.png")
-image viola cs_1gs_normal = im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_normal.png")
-image viola cs_1gs_shy = im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_shy.png")
-image viola cs_1gs_smile = im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_smile.png")
-image viola cs_1s_normal = im.Composite((960, 960), (0, 0), "images/cs/cs_1s_normal.png")
-image viola cs_1s_shy = im.Composite((960, 960), (0, 0), "images/cs/cs_1s_shy.png")
-image viola cs_1s_smile = im.Composite((960, 960), (0, 0), "images/cs/cs_1s_smile.png")
+image viola cs_1_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1_shy = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1_shy.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1_shy.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1_shy.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1g_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1g_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1g_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1g_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1g_shy = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1g_shy.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1g_shy.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1g_shy.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1g_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1g_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1g_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1g_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1gs_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1gs_shy = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_shy.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_shy.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_shy.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1gs_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1gs_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1s_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1s_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1s_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1s_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1s_shy = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1s_shy.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1s_shy.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1s_shy.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image viola cs_1s_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/cs/cs_1s_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1s_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/cs/cs_1s_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
 #Модельки Алисы (взято из «Бесконечное лето»)
-image alice dv_1p_cry = im.Composite((960, 960), (0, 0), "images/dv/dv_1p_cry.png")
-image alice dv_1p_scared = im.Composite((960, 960), (0, 0), "images/dv/dv_1p_scared.png")
-image alice dv_1p_shocked = im.Composite((960, 960), (0, 0), "images/dv/dv_1p_shocked.png")
-image alice dv_1p_surprised = im.Composite((960, 960), (0, 0), "images/dv/dv_1p_surprised.png")
-image alice dv_1p2_cry = im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_cry.png")
-image alice dv_1p2_scared = im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_scared.png")
-image alice dv_1p2_shocked = im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_shocked.png")
-image alice dv_1p2_surprised = im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_surprised.png")
-image alice dv_2p_grin = im.Composite((960, 960), (0, 0), "images/dv/dv_2p_grin.png")
-image alice dv_2p2_grin = im.Composite((960, 960), (0, 0), "images/dv/dv_2p2_grin.png")
-image alice dv_2sw_grin = im.Composite((960, 960), (0, 0), "images/dv/dv_2sw_grin.png")
-image alice dv_3p_guilty = im.Composite((960, 960), (0, 0), "images/dv/dv_3p_guilty.png")
-image alice dv_3p_sad = im.Composite((960, 960), (0, 0), "images/dv/dv_3p_sad.png")
-image alice dv_3p_shy = im.Composite((960, 960), (0, 0), "images/dv/dv_3p_shy.png")
-image alice dv_3p2_guilty = im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_guilty.png")
-image alice dv_3p2_sad = im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_sad.png")
-image alice dv_3p2_shy = im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_shy.png")
-image alice dv_4p_laugh = im.Composite((960, 960), (0, 0), "images/dv/dv_4p_laugh.png")
-image alice dv_4p_normal = im.Composite((960, 960), (0, 0), "images/dv/dv_4p_normal.png")
-image alice dv_4p_smile = im.Composite((960, 960), (0, 0), "images/dv/dv_4p_smile.png")
-image alice dv_4p2_laugh = im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_laugh.png")
-image alice dv_4p2_normal = im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_normal.png")
-image alice dv_4p2_smile = im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_smile.png")
-image alice dv_4sw_laugh = im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_laugh.png")
-image alice dv_4sw_normal = im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_normal.png")
-image alice dv_4sw_smile = im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_smile.png")
-image alice dv_5p_angry = im.Composite((960, 960), (0, 0), "images/dv/dv_5p_angry.png")
-image alice dv_5p_rage = im.Composite((960, 960), (0, 0), "images/dv/dv_5p_rage.png")
-image alice dv_5p2_angry = im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_angry.png")
-image alice dv_5p2_rage = im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_rage.png")
+image alice dv_1p_cry = ConditionSwitch( 
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p_cry.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_cry.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_cry.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p_scared = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p_scared.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_scared.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_scared.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p_shocked = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p_shocked.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_shocked.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_shocked.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p_surprised = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p_surprised.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_surprised.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p_surprised.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p2_cry = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_cry.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_cry.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_cry.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p2_scared = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_scared.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_scared.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_scared.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p2_shocked = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_shocked.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_shocked.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_shocked.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_1p2_surprised = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_surprised.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_surprised.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_1p2_surprised.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_2p_grin = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_2p_grin.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_2p_grin.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_2p_grin.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_2p2_grin = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_2p2_grin.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_2p2_grin.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_2p2_grin.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_2sw_grin = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_2sw_grin.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_2sw_grin.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_2sw_grin.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_3p_guilty = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_3p_guilty.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p_guilty.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p_guilty.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_3p_sad = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_3p_sad.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p_sad.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p_sad.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_3p_shy = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_3p_shy.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p_shy.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p_shy.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_3p2_guilty = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_guilty.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_guilty.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_guilty.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_3p2_sad = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_sad.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_sad.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_sad.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_3p2_shy = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_shy.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_shy.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_3p2_shy.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4p_laugh = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4p_laugh.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p_laugh.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p_laugh.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4p_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4p_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4p_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4p_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4p2_laugh = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_laugh.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_laugh.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_laugh.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4p2_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4p2_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4p2_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4sw_laugh = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_laugh.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_laugh.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_laugh.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4sw_normal = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_normal.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_4sw_smile = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_smile.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_4sw_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_5p_angry = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_5p_angry.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p_angry.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p_angry.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_5p_rage = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_5p_rage.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p_rage.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p_rage.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_5p2_angry = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_angry.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_angry.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_angry.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image alice dv_5p2_rage = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_rage.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_rage.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/dv/dv_5p2_rage.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 
 #Модельки Мику (взято из «Бесконечное лето»)
 image miku mi_1p_cry = im.Composite((960, 960), (0, 0), "images/mi/mi_1p_cry.png")
