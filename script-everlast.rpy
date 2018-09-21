@@ -224,6 +224,7 @@ label script_everlast:
     scene black
     $ pause(2.0)
     scene bg bus_stop with dissolve
+    $ persistent.edd_bg1 = True
     show layer master at bg_zoom_e(2.0, 1.0, 3.0, 0.5, 0.5, 0.0, 0.0)
     $ ShowScreens(False)
     if persistent.menu_bg_animation:
@@ -235,6 +236,7 @@ label script_everlast:
     hide light_bg_anim_night
     play music audio.t12 fadein 2
     scene bg ext_camp_entrance_day with wipeleft_scene
+    $ persistent.edd_bg2 = True
     if persistent.menu_bg_animation:
         show light_bg_anim zorder 10
     m "..."
@@ -447,6 +449,7 @@ label script_everlast:
     $ renpy.pause(1.0, hard=True)
     scene bg ext_houses_day
     with wipeleft
+    $ persistent.edd_bg3 = True
     if persistent.menu_bg_animation:
         show light_bg_anim zorder 10
     $ ShowScreens(False)
