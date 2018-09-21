@@ -1,12 +1,11 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
 define config.developer = False
-default persistent.you_kill_nekomonika = None
 
 #define nightmode = ""
-#define outlines_nightmode = "#ffcabd"
-#define hover_outlines_nightmode = "#ffd7cd"
-#define insensitive_outlines_nightmode = "#ebd0c9"
+#define outlines_nightmode = "ffcabd"
+#define hover_outlines_nightmode = "ffd7cd"
+#define insensitive_outlines_nightmode = "ebd0c9"
 
 python early:
     import singleton
@@ -72,6 +71,96 @@ init python:
         renpy.show_layer_at(showscreens, layer='screens')
         if pause:
             renpy.pause(delay=0.8, hard=True)
+    def gallery_return():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.show_screen("main_menu")
+    def gallery_action():
+        renpy.show_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery2_action():
+        renpy.hide_screen("gallery")
+        renpy.show_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4") 
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery3_action():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.show_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery4_action():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.show_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery5_action():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.show_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery6_action():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.show_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery7_action():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.show_screen("gallery7")
+        renpy.hide_screen("gallery8")
+        renpy.hide_screen("main_menu")
+    def gallery8_action():
+        renpy.hide_screen("gallery")
+        renpy.hide_screen("gallery2")
+        renpy.hide_screen("gallery3")
+        renpy.hide_screen("gallery4")
+        renpy.hide_screen("gallery5")
+        renpy.hide_screen("gallery6")
+        renpy.hide_screen("gallery7")
+        renpy.show_screen("gallery8")
+        renpy.hide_screen("main_menu")
             
 
 image mask_child:
@@ -606,7 +695,7 @@ image dust12:
 
 
 
-define audio.t1 = "bgm/blow_with_the_fires.ogg"
+define audio.t1 = "<loop 22.073>bgm/blow_with_the_fires.ogg"
 define audio.t2 = "<loop 4.499>bgm/2.ogg"
 define audio.t2g = "bgm/2g.ogg"
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"
@@ -640,8 +729,6 @@ define audio.t14 = "<loop 19.451>mod_assets/14.ogg"
 define audio.t15 = "bgm/get_to_know_me_better.ogg"
 define audio.t16 = "mod_assets/16.ogg"
 define audio.walk = "mod_assets/walk.ogg"
-define audio.td = "<loop 36.782>bgm/d.ogg"
-define audio.attack_screen = "mod_assets/attack_screen.ogg"
 define audio.t410 = "bgm/410.ogg"
 define audio.afterword = "bgm/afterword.ogg"
 define audio.always_ready = "bgm/always_ready.ogg"
@@ -662,9 +749,12 @@ define audio.forest_maiden = "bgm/forest_maiden.ogg"
 define audio.gentle_predator = "bgm/gentle_predator.ogg"
 define audio.camp_center_day = "bgm/camp_center_day.ogg"
 
+define audio.td = "<loop 36.782>bgm/d.ogg"
+define audio.attack_screen = "mod_assets/attack_screen.ogg"
+
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
-define audio.everlast = "bgm/blow_with_the_fires.ogg"
+define audio.everlast = "<loop 22.073>bgm/blow_with_the_fires.ogg"
 define audio.night = "bgm/nightsound.mp3"
 define audio.eurobeatreality = "bgm/eurobeatreality.ogg"
 
@@ -817,6 +907,7 @@ image bg int_old_building_night = "bg/int_old_building_night.jpg"
 image bg intro_xx = "bg/intro_xx.jpg"
 image bg semen_room = "bg/semen_room.jpg"
 image bg semen_room_window = "bg/semen_room_window.jpg"
+
 #image splash-everlast = Movie(play="mod_assets/splash-everlast.m2t")
 
 image bg notebook = "bg/notebook.png"
@@ -994,7 +1085,7 @@ image miku mi_3sw_serious = im.Composite((960, 960), (0, 0), "images/mi/mi_3sw_s
 image miku mi_3sw_upset = im.Composite((960, 960), (0, 0), "images/mi/mi_3sw_upset.png")
 
 default persistent.sprite_time = 'day'
-
+                         
 #Модельки Слави (взято из «Бесконечное лето»)
 image slavya sl_1d_normal = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/sl/sl_1d_normal.png"),
@@ -1172,7 +1263,6 @@ image slavya sl_4sw_tender = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "images/sl/sl_4sw_tender.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/sl/sl_4sw_tender.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "images/sl/sl_4sw_tender.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-
 
 #Композиты, прописанные Дэном Салвато (взято из «Литературный клуб "Тук-тук!"»)
 image sayori 1 = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/a.png")
@@ -2015,14 +2105,14 @@ image natsuki 2bd = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/d.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/d.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/d.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-image natsuki 2be = ConditionSwitch(
-    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"),
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 2bea = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 2be = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 2bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2132,14 +2222,14 @@ image natsuki 3bd = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/d.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/d.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/d.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-image natsuki 3be = ConditionSwitch(
-    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"),
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 3bea = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 3be = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 3bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2232,7 +2322,7 @@ image natsuki 3bzb = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/zb.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-    
+
 image natsuki 4ba = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/a.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/a.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2249,14 +2339,14 @@ image natsuki 4bd = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/d.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/d.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/d.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-image natsuki 4be = ConditionSwitch(
-    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"),
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 4bea = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/ea.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
+image natsuki 4be = ConditionSwitch(
+    "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"),
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/e.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
 image natsuki 4bf = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "natsuki/f.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
@@ -2573,7 +2663,7 @@ image natsuki 6bh = ConditionSwitch(
     "persistent.sprite_time=='day'",im.Composite((960, 960), (0, 0), "natsuki/6bh.png"),
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bh.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((960, 960), (0, 0), "natsuki/6bh.png"), im.matrix.tint(0.63, 0.78, 0.82) ))
-    
+
 image natsuki 1 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")
 image natsuki 2 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/1t.png")
 image natsuki 3 = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")
@@ -3379,10 +3469,10 @@ image monika g2:
 
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")
-define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define mc = DynamicCharacter('player', image='mc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define mm = DynamicCharacter('m_name', what_prefix='~', what_suffix='~', ctc="ctc", ctc_position="fixed")
+define mm = DynamicCharacter('m_name', image='monika', what_prefix='~', what_suffix='~', ctc="ctc", ctc_position="fixed")
 define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define ny = Character('Нацуки и Юри', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
@@ -3395,6 +3485,55 @@ define nm = DynamicCharacter('nm_name', what_prefix='"', what_suffix='"', ctc="c
 
 define _dismiss_pause = config.developer
 
+default persistent.edd_bg1 = None
+default persistent.edd_bg2 = None
+default persistent.edd_bg3 = None
+default persistent.edd_bg4 = None
+default persistent.edd_bg5 = None
+default persistent.edd_bg6 = None
+default persistent.edd_bg7 = None
+default persistent.edd_bg8 = None
+default persistent.edd_bg9 = None
+default persistent.edd_bg10 = None
+default persistent.edd_bg11 = None
+default persistent.edd_bg12 = None
+default persistent.edd_bg13 = None
+default persistent.edd_bg14 = None
+default persistent.edd_bg15 = None
+default persistent.edd_bg16 = None
+default persistent.edd_bg17 = None
+default persistent.edd_bg18 = None
+default persistent.edd_bg19 = None
+default persistent.edd_bg20 = None
+default persistent.edd_bg21 = None
+default persistent.edd_bg22 = None
+default persistent.edd_bg23 = None
+default persistent.edd_bg24 = None
+default persistent.edd_bg25 = None
+default persistent.edd_bg26 = None
+default persistent.edd_bg27 = None
+default persistent.edd_bg28 = None
+default persistent.edd_bg29 = None
+default persistent.edd_bg30 = None
+default persistent.edd_bg31 = None
+default persistent.edd_bg32 = None
+default persistent.edd_bg33 = None
+default persistent.edd_bg34 = None
+default persistent.edd_bg35 = None
+default persistent.edd_bg36 = None
+default persistent.edd_bg37 = None
+default persistent.edd_bg38 = None
+default persistent.edd_bg39 = None
+default persistent.edd_bg40 = None
+default persistent.edd_bg41 = None
+default persistent.edd_bg42 = None
+default persistent.edd_bg43 = None
+default persistent.edd_bg44 = None
+default persistent.edd_bg45 = None
+default persistent.edd_bg46 = None
+default persistent.edd_bg47 = None
+default persistent.edd_bg48 = None
+default persistent.you_kill_nekomonika = None
 default persistent.playername = ""
 default bg_anim = None
 default player = persistent.playername

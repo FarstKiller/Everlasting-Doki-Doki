@@ -24,8 +24,47 @@ transform screen_attack:
         ease 0.25 rotate -1.9
         ease 0.25 rotate 1.0
         ease 0.25 rotate 0.0
+
+transform bg_zoom_rotate_l(z=1.0, zz=1.0, t=0.25, x=0.5, xx=0.5, y=0.5, yy=0.5, r=0.0, rr=0.0):
+    zoom z xalign x yalign y rotate r
+    linear t zoom zz xalign xx yalign yy rotate rr
+        
 transform bg_alpha(a=1.0):
     alpha a
+
+transform gallery_items_anim_down:
+    on show:
+        ypos -100 alpha 0.0
+        pause 0.5
+        ease 0.5 ypos 50 alpha 1.0
+    on hide:
+        xpos 0.0 ypos 50 alpha 1.0
+        ease 0.5 ypos -100 alpha 0.0
+        
+transform gallery_items_anim_down2:
+    on show:
+        ypos 150 alpha 0.0
+        pause 0.5
+        ease 0.5 ypos 300 alpha 1.0
+    on hide:
+        xpos 0.0 ypos 300 alpha 1.0
+        ease 0.5 ypos 150 alpha 0.0
+
+transform gallery_text_anim_up:
+    on show:
+        ypos 800 alpha 0.0
+        ease 0.5 ypos 650 alpha 1.0
+    on hide:
+        xpos 0.0 ypos 650 alpha 1.0
+        ease 0.5 ypos 800 alpha 0.0
+
+transform gallery_box_anim_up:
+    on show:
+        ypos 0.2 alpha 0.0
+        ease 0.5 ypos 0.0 alpha 1.0
+    on hide:
+        xpos 0.0 ypos 0.0 alpha 1.0
+        ease 0.5 ypos 0.2 alpha 0.0
 
 transform rs51:
     rightin_slowly(216)
@@ -79,14 +118,18 @@ transform ls22:
 transform ls11:
     leftin_slowly(640)
 
+transform sprite_zoom_l(z=0.80, zz=1.60, t=2.0, x=640, xx=640, y=600, yy=800):
+    xcenter x yanchor 1.0 yoffset y zoom z
+    linear t xcenter xx zoom zz yoffset yy
+
 transform rightin_slowly(x=640, z=0.80):
     xcenter 1400 yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
     easein 2.00 xcenter x
-    
+
 transform leftin_slowly(x=640, z=0.80):
     xcenter -300 yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
     easein 1.00 xcenter x
-
+    
 transform hide_right_slowly:
     subpixel True
     on hide:
@@ -96,10 +139,6 @@ transform hide_left_slowly:
     subpixel True
     on hide:
         easeout 2.00 xcenter -300
-
-transform bg_zoom_rotate_l(z=1.0, zz=1.0, t=0.25, x=0.5, xx=0.5, y=0.5, yy=0.5, r=0.0, rr=0.0):
-    zoom z xalign x yalign y rotate r
-    linear t zoom zz xalign xx yalign yy rotate rr
 
 transform right_menu_anim_fast(xal):
     xoffset -100

@@ -246,7 +246,7 @@ init 499 image ctc:
 
 
 init 499 image input_caret:
-    Solid("#000")
+    Solid("#fff")
     size (2,25) subpixel True
     block:
         linear 0.35 alpha 0
@@ -466,8 +466,8 @@ init -501 screen navigation():
         if not persistent.autoload or not main_menu:
 
             if main_menu:
-
-                    textbutton _("Новая игра") at right_menu_anim_fast(0.0) action Jump("edd_input_name")
+                
+                textbutton _("Новая игра") at right_menu_anim_fast(0.0) action Jump("edd_input_name")
 
             else:
 
@@ -476,6 +476,8 @@ init -501 screen navigation():
                 textbutton _("Сохранить") at right_menu_anim_fast(0.0) action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
 
             textbutton _("Загрузить") at right_menu_anim_fast(0.0) action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
+            if main_menu:
+                textbutton _("Галерея") at right_menu_anim_fast(0.0) action Function(gallery_action) xpos 0 ypos 0
 
             if _in_replay:
 
@@ -492,16 +494,639 @@ init -501 screen navigation():
 
 
                 textbutton _("Об игре") at right_menu_anim_fast(0.0) action [ShowMenu("about"), SensitiveIf(renpy.get_screen("about") == None)]
-                textbutton _("Change Language") at right_menu_anim_fast(0.0) action [ShowMenu("language"), SensitiveIf(renpy.get_screen("language") == None)]
+                textbutton _("Language") at right_menu_anim_fast(0.0) action [ShowMenu("language"), SensitiveIf(renpy.get_screen("language") == None)]
 
                 textbutton _("Выход") at right_menu_anim_fast(0.0) action Quit(confirm=not main_menu)
         else:
             timer 1.75 action Start("autoload_yurikill")
 
+image gbg:
+    "mod_assets/gbg.jpg"
+
+image gbg_overlay:
+    "mod_assets/gbg_overlay.png"
+
+image lock = im.Scale("mod_assets/lock.png", 346, 200)
+image bg1:
+    contains:
+        im.Scale("bg/bus_stop.jpg", 346, 200)
+    contains:  
+        im.Scale("mod_assets/lock2.png", 346, 200)
+
+image bg2:
+    contains:
+        im.Scale("bg/ext_camp_entrance_day.jpg", 346, 200)
+    contains:  
+        im.Scale("mod_assets/lock2.png", 346, 200)
+
+image bg3:
+    contains:
+        im.Scale("bg/ext_houses_day.jpg", 346, 200)
+    contains:  
+        im.Scale("mod_assets/lock2.png", 346, 200)
+        
+screen gallery():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        xpos 400 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        xpos 450 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg1:
+        add "bg1" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg2:
+        add "bg2" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg3:
+        add "bg3" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg4:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg5:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg6:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery2():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg7:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg8:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg9:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg10:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg11:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg12:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery3():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up 
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg13:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg14:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg15:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg16:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg17:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg18:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery4():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up 
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg19:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg20:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg21:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg22:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg23:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg24:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery5():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up 
+    textbutton _("5"):
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg25:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg26:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg27:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg28:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg29:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg30:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery6():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up 
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg31:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg32:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg33:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg34:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg35:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg36:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery7():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up 
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        action Function(gallery8_action)
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg37:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg38:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg39:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg40:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg41:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg42:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+
+screen gallery8():
+    add "gbg"
+    add "light_menu_anim"
+    add "gbg_overlay" at gallery_box_anim_up
+    textbutton _("Назад"):
+        action Function(gallery_return)
+        style "gallery_button"
+        xpos 76 ypos 650
+        at gallery_text_anim_up
+    textbutton _("1"):
+        action Function(gallery_action)
+        style "gallery_button"
+        xpos 400 ypos 650
+        at gallery_text_anim_up
+    textbutton _("2"):
+        action Function(gallery2_action)
+        style "gallery_button"
+        xpos 450 ypos 650
+        at gallery_text_anim_up
+    textbutton _("3"):
+        action Function(gallery3_action)
+        xpos 500 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("4"):
+        action Function(gallery4_action)
+        xpos 550 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up 
+    textbutton _("5"):
+        action Function(gallery5_action)
+        xpos 600 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("6"):
+        action Function(gallery6_action)
+        xpos 650 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("7"):
+        action Function(gallery7_action)
+        xpos 700 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    textbutton _("8"):
+        xpos 750 ypos 650
+        style "gallery_button"
+        at gallery_text_anim_up
+    if persistent.edd_bg43:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 68 ypos 50
+    if persistent.edd_bg44:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 468 ypos 50
+    if persistent.edd_bg45:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    else:
+        add "lock" at gallery_items_anim_down xpos 868 ypos 50
+    if persistent.edd_bg46:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 68 ypos 300
+    if persistent.edd_bg47:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 468 ypos 300
+    if persistent.edd_bg48:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
+    else:
+        add "lock" at gallery_items_anim_down2 xpos 868 ypos 300
 
 init -1 style navigation_button is gui_button
 init -1 style navigation_button_text is gui_button_text
 
+init -1 style gallery_button:
+    size_group "navigation"
+    properties gui.button_properties("navigation_button")
+    hover_sound gui.hover_sound
+    activate_sound gui.activate_sound
+
+init -1 style gallery_button_text:
+    properties gui.button_text_properties("navigation_button")
+    font "gui/font/rosemary.ttf"
+    size 24
+    color "#fff"
+    outlines [(4, "#9eff98", 0, 0), (2, "#9eff98", 2, 2)]
+    hover_outlines [(4, "#adfea8", 0, 0), (2, "#adfea8", 2, 2)]
+    insensitive_outlines [(4, "#baffb6", 0, 0), (2, "#baffb6", 2, 2)]
+    
 init -1 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
@@ -512,9 +1137,9 @@ init -1 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
     font "gui/font/rosemary.ttf"
     color "#fff"
-    outlines [(4, "#ffcabd", 0, 0), (2, "#ffcabd", 2, 2)]
-    hover_outlines [(4, "#ffd7cd", 0, 0), (2, "#ffd7cd", 2, 2)]
-    insensitive_outlines [(4, "#ebd0c9", 0, 0), (2, "#ebd0c9", 2, 2)]
+    outlines [(4, "#9eff98", 0, 0), (2, "#9eff98", 2, 2)]
+    hover_outlines [(4, "#adfea8", 0, 0), (2, "#adfea8", 2, 2)]
+    insensitive_outlines [(4, "#baffb6", 0, 0), (2, "#baffb6", 2, 2)]
 
 #style navigation_night_button is gui_button
 #style navigation_night_button_text is gui_button_text
@@ -559,7 +1184,7 @@ init -501 screen main_menu() tag menu:
         #add "menu_bg_night"
         #add "light_bg_anim_night"
         add "menu_bg"
-        add "light_bg_anim"
+        add "light_menu_anim"
         #add "menu_art_y"
         #add "menu_art_n"
         frame
@@ -644,13 +1269,13 @@ init -1 style main_menu_title:
     size gui.title_text_size
 
 #style main_menu_night_frame is main_menu_frame_night
-#style main_menu_vbox is vbox
-#style main_menu_text is gui_text
-#style main_menu_title is main_menu_text
-#style main_menu_version is main_menu_text:
-#    color "#ffffff"
-#    size 16
-#    outlines []
+style main_menu_vbox is vbox
+style main_menu_text is gui_text
+style main_menu_title is main_menu_text
+style main_menu_version is main_menu_text:
+    color "#ffffff"
+    size 16
+    outlines []
 
 
 
@@ -836,7 +1461,7 @@ init -1 style game_menu_label_text:
     font "gui/font/rosemary.ttf"
     size gui.title_text_size
     color "#fff"
-    outlines [(6, "#ffcabd", 0, 0), (3, "#ffcabd", 2, 2)]
+    outlines [(6, "#9eff98", 0, 0), (3, "#9eff98", 2, 2)]
     yalign 0.5
 
 #init -1 style game_menu_label_text_night:
@@ -909,7 +1534,7 @@ init -1 style about_label_text:
 
 
 init -501 screen language() tag menu:
-    use game_menu(_("Смена языка"), scroll="viewport"):
+    use game_menu(_("Язык"), scroll="viewport"):
         style_prefix "about"
         vbox:
             text _("Здесь пока ничего нет. Но вскоре будет. :D")
@@ -1038,7 +1663,7 @@ init -1 style page_label:
 
 init -1 style page_label_text:
     color "#fff"
-    outlines [(4, "#ffcabd", 0, 0), (2, "#ffcabd", 2, 2)]
+    outlines [(4, "#9eff98", 0, 0), (2, "#9eff98", 2, 2)]
     text_align 0.5
     layout "subtitle"
     hover_color gui.hover_color
@@ -1196,7 +1821,7 @@ init -1 style pref_label_text:
     font "gui/font/rosemary.ttf"
     size 24
     color "#fff"
-    outlines [(3, "#ffcabd", 0, 0), (1, "#ffcabd", 1, 1)]
+    outlines [(3, "#9eff98", 0, 0), (1, "#9eff98", 1, 1)]
     yalign 1.0
 
 init -1 style pref_vbox:
@@ -1561,6 +2186,12 @@ init -501 screen dialog(message, ok_action):
 
             textbutton _("OK") action ok_action
 
+init 499 image confirm_glitch:
+    "gui/overlay/confirm_glitch.png"
+    pause 0.02
+    "gui/overlay/confirm_glitch2.png"
+    pause 0.02
+    repeat
 
 init -501 screen confirm(message, yes_action, no_action):
 
@@ -1612,7 +2243,7 @@ init -1 style confirm_frame:
     yalign .5
 
 init -1 style confirm_prompt_text:
-    color "#000"
+    color "#fff"
     outlines []
     text_align 0.5
     layout "subtitle"
