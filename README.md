@@ -4,3 +4,5 @@
 Ren'Py latest version is required.
 
 There are no some files due to GitHub size limits. :D
+
+Mod developers: Ardesqa (code organization), Neko-Monika (graphics), MtnDewSmoker420 (scripts, scenario [?]), FarstKiller (scripts)
